@@ -103,9 +103,9 @@ def loadDB(filepath):
     for key in data:
         advisorNodeId = str(getrid(client,key))
         print("AdvisorNodeId = '" + advisorNodeId + "'")
-        # for student in data.get(key)["students"]:
-        #     studentNodeId = str(getrid(client,student))
-        #     client.command("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
+        for student in data.get(key)["students"]:
+            studentNodeId = str(getrid(client,student))
+            client.command("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
 
     client.close()
 
@@ -135,7 +135,7 @@ def shortestPath(personIdA, personIdB):
     distance = len(pathlist[0].__getattr__('shortestPath'))
 
     for node in pathlist[0].__getattr__('shortestPath'):
-        #print(node)
+        print(node)
 
     #pyorient.otypes.OrientRecord
     client.close()
