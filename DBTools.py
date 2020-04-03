@@ -95,7 +95,7 @@ def loadDB(filepath):
 
         #name = re.sub("'", "", data.get(key).get("name"))
 
-        print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "', wikiImage = '" + wikiImg + "' DegreeLists = '" + degLists + "'")
+        print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "'")
         #print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "', wikiImg = '" + wikiImg + "', Degree Lists = '" + degLists + "'")
         client.command("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "'")
 
