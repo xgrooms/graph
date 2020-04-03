@@ -95,9 +95,9 @@ def loadDB(filepath):
 
         #name = re.sub("'", "", data.get(key).get("name"))
 
-        print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "'")
+        #print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "'")
         #print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "', wikiImg = '" + wikiImg + "', Degree Lists = '" + degLists + "'")
-        client.command("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "'")
+        client.command("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "'")
 
     #loop through each key creating edges from advisor to advise
     for key in data:
