@@ -105,7 +105,8 @@ def loadDB(filepath):
         print("AdvisorNodeId = '" + advisorNodeId + "'")
         for student in data.get(key)["students"]:
             studentNodeId = str(getrid(client,student))
-            client.command("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
+            print("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
+            #client.command("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
 
     client.close()
 
