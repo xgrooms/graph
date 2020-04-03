@@ -27,18 +27,18 @@ def printJSONDB(filepath):
         wikiImage = data.get(key).get("wikiImage")
         degreeLists = data.get(key).get("degreeLists")
 
-        print("json key:\t\t" + key)
-        print("name:\t\t\t" + name)
+#         print("json key:\t\t" + key)
+#         print("name:\t\t\t" + name)
 
-        #Most people are on Wikipedia, but not everyone
-        if wikiUrl is not None:
-            print("wikiUrl:\t\t" + wikiUrl)
-        if wikiImage is not None:
-            print("wikiImage:\t\t" + wikiImage)
+#         #Most people are on Wikipedia, but not everyone
+#         if wikiUrl is not None:
+#             print("wikiUrl:\t\t" + wikiUrl)
+#         if wikiImage is not None:
+#             print("wikiImage:\t\t" + wikiImage)
 
-        print("degreeLists:\t", end=" ")
-        print(degreeLists)
-        print("")
+#         print("degreeLists:\t", end=" ")
+#         print(degreeLists)
+#         print("")
 
 def loadDB(filepath):
 
