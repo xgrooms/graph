@@ -95,7 +95,7 @@ def loadDB(filepath):
 
         #name = re.sub("'", "", data.get(key).get("name"))
 
-        print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "'")
+        print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "', wikiImage = '" + wikiImg + "' DegreeLists = '" + degLists + "'")
         #print("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "', wikiUrl = '" + wikiUrl + "', wikiImg = '" + wikiImg + "', Degree Lists = '" + degLists + "'")
         client.command("CREATE VERTEX Person SET id = '" + key + "', name = '" + name + "'")
 
@@ -105,7 +105,7 @@ def loadDB(filepath):
         print("AdvisorNodeId = '" + advisorNodeId + "'")
         for student in data.get(key)["students"]:
             studentNodeId = str(getrid(client,student))
-            print("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
+            #print("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
             #client.command("CREATE EDGE FROM " + advisorNodeId + " TO " + studentNodeId + "'")
 
     client.close()
